@@ -1,0 +1,181 @@
+[{
+    "id":1,
+    "name":"Apple",
+    "genus":"Malus",
+    "family":"Rosaceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"The apple tree has its origin in Kazakhstan, but is now found in many regions with a temperate or subtropical climate. Most apples are produced in China. Other important apple producers include USA, Iran, Turkey, Russia, India, Italy and France."
+},
+{
+    "id":2,
+    "name":"Rose",
+    "genus":"Rosa",
+    "family":"Rosaceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"Roses are grown as ornamental plants in gardens or to be sold as cut flowers. Essential oils extracted from the petals are used in perfumes. Rose water can be used for cooking, in cosmetics and in religious rituals. Fruits of many species are rich in vitamins and are used in food or sometimes as medicine. In the genus Rosa, there are over 100 species of roses. Garden roses are mostly hybrids."
+},
+{
+    "id":3,
+    "name":"Cherry",
+    "genus":"Prunus",
+    "family":"Rosaceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"Wild cherries grow in most of Europe, western Asia and parts of northern Africa. The cultivated cherry has its origin in Turkey, from where it spread to Europe. Cherries can grow in most temperate climates. Cherries fruits are drupes (stone fruits), best known for their bright red color. Most sweet cherries are eaten fresh, while sour cherries (another species) are used for cooking. Cherry trees are closely related to almonds, peaches, plums, apricots, which all belong to the same genus."
+},
+{
+    "id":4,
+    "name":"Banana",
+    "genus":"Musa",
+    "family":"Musaceae",
+    "order":"Zingiberales",
+    "image":"",
+    "info":"Bananas have their origin in tropical South-East Asia but are now found in almost all tropical regions of the world. Important banana producing countries include India, Philippines, China, Ecuador, Brazil, Indonesia, Mexico, Costa Rica, Columbia and Thailand."
+},
+{
+    "id":5,
+    "name":"Kiwi",
+    "genus":"Actinidia",
+    "family":"Actinidiaceae",
+    "order":"Ericales",
+    "image":"",
+    "info":"The kiwifruit, or just kiwi, was first known as “Chinese Gooseberry”. It got its new name from the kiwi bird, one of the national symbols of New Zealand. The kiwi fruit is a fuzzy brown egg-shaped fruit with green flesh."
+},
+{
+    "id":6,
+    "name":"Lemon",
+    "genus":"Citrus",
+    "family":"Rutaceae",
+    "order":"Sapindales",
+    "image":"",
+    "info":"None"
+},
+{
+    "id":7,
+    "name":"Mango",
+    "genus":"Mangifera",
+    "family":"Anacardiaceae",
+    "order":"Sapindales",
+    "image":"",
+    "info":"Mango is often known as the “apple of the tropics”. It is one of the most popular tropical fruits in the world (together with pineapple, banana, papaya and avocado). Mango fruits are usually eaten ripe, when they are soft and sweet. But some people prefer them unripe, when they are harder with a more sour taste. Mango is also used to produce juice, jam or jelly. Unripe fruits can be used to prepare pickles or chutney."
+},
+{
+    "id":8,
+    "name":"Peach",
+    "genus":"Prunus",
+    "family":"Rosaceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"Peaches are known for their soft velvety skin and their sweet aromatic and juicy flesh. Nectarines are a type of peach, but with a smooth skin. Some people think that nectarines are a cross between peach and plum, but this is not true."
+},
+{
+    "id":9,
+    "name":"Lychee",
+    "genus":"Litchi",
+    "family":"Sapindaceae",
+    "order":"Sapindales",
+    "image":"",
+    "info":"Lychee or litchi trees produce their tasty fruits during a very short period each year, but canned fruits can be enjoyed throughout the year. Lychee is an important fruit tree in south China and south-east Asia."
+},
+{
+    "id":10,
+    "name":"Avocado",
+    "genus":"Persea",
+    "family":"Lauraceae",
+    "order":"Laurales",
+    "image":"",
+    "info":"Avocado originates from Southern Mexico and Central America. The avocado is a very nutritious fruit. The fruits are not sweet, but have a fatty flavor and a creamy texture. Avocado is often used in salads and can be regarded as a vegetable. It is one of the most important tropical fruits."
+},
+{
+    "id":11,
+    "name":"Strawberry",
+    "genus":"Fragaria",
+    "family":"Rosaceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"When farmers grow strawberries they will often cover the soil with straw to protect the fruits from rot. Maybe this is how the strawberry got its name. The genus Fragaria includes several strawberries."
+},
+{
+    "id":12,
+    "name":"Dragonfruit",
+    "genus":"Hylocereus",
+    "family":"Cactaceae",
+    "order":"Caryophyllales",
+    "image":"",
+    "info":"Dragon fruits have their origin in Mexico, Central and South America. But they are also grown in South-East Asia (Malaysia, Thailand, Vietnam, Southern China) and in Israel."
+},
+{
+    "id":13,
+    "name":"Orange",
+    "genus":"Genus",
+    "family":"Rutaceae",
+    "order":"Sapindales",
+    "image":"",
+    "info":"Oranges originate from south-east Asia but can now be found in most tropical and sub-tropical climates around the world. They belong to the Citrus family. Probably oranges were created long ago as a hybrid between two other Citrus fruits: pomelo and tangerine."
+},
+{
+    "id":14,
+    "name":"Starfruit",
+    "genus":"Averrhoa",
+    "family":"Oxalidaceae",
+    "order":"Oxalidales",
+    "image":"",
+    "info":"Starfruit or Carambola has a golden-yellow to green color and a slightly tart, acidic, sweet taste. When cut across the fruit shows a 5-pointed star shape, which is why the fruits got their name."
+},
+{
+    "id":15,
+    "name":"Salak",
+    "genus":"Salacca",
+    "family":"Arecaceae",
+    "order":"Arecales",
+    "image":"",
+    "info":"Salak originates from Indonesia and Malaysia."
+},
+{
+    "id":16,
+    "name":"Mulberry",
+    "genus":"Morus",
+    "family":"Moraceae",
+    "order":"Rosales",
+    "image":"",
+    "info":"Within the genus Morus, there are several species of Mulberries. While the mulberry produces edible fruits, it is better known as a fodder that is used to grow silk worms, which in turn are used to produce silk. Mulberry trees are also grown as ornamental plants in parks and gardens."
+},
+{
+    "id":17,
+    "name":"Dandelion",
+    "genus":"",
+    "family":"",
+    "order":"",
+    "image":"",
+    "info":""
+},
+{
+    "id":18,
+    "name":"Daisy",
+    "genus":"",
+    "family":"",
+    "order":"",
+    "image":"",
+    "info":""
+},
+{
+    "id":19,
+    "name":"Sunflower",
+    "genus":"",
+    "family":"",
+    "order":"",
+    "image":"",
+    "info":""
+},
+{
+    "id":20,
+    "name":"Tulip",
+    "genus":"",
+    "family":"",
+    "order":"",
+    "image":"",
+    "info":""
+}
+]

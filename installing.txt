@@ -1,0 +1,6 @@
+#set the environment variable PYTHONPATH 
+pointing to the folder "site-packages" to import AI python library (numpy...)
+
+python -m venv .venv --system-site-packages
+
+use pyrebase4
