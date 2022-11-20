@@ -13,6 +13,8 @@ def _predict(image_url,model,classes):
     test_image = test_image / 255
     pred = model.predict(test_image)
     argmax = np.argmax(pred)
+    if(argmax > len(classes)):
+        return "not found"
     label = classes[argmax]
     return label
 

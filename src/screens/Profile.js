@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View,Text,SafeAreaView,StyleSheet,StatusBar,TouchableOpacity, TextInput,Image,Button } from "react-native";
 import CustomHeader from "../components/CustomHeader";
-import * as ImagePicker from 'expo-image-picker';
+
 
 const Profile = ({navigation}) => {
 

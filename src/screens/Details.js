@@ -74,6 +74,43 @@ const Details = ({navigation,route}) => {
                   
                     </Text>
                 </View>
+                <View style={styles.container}>
+                    <View style={{flexDirection:"row"}}>
+                        <Text style={{fontSize:20, marginTop:10, marginLeft:10,color:fontColor,fontWeight:"700"}}>
+                            Chi
+                        </Text>
+                        <Text style={[styles.species_info,{marginTop:5,marginLeft:26}]}>
+                            {route.params.genus ? route.params.genus : null}
+                        </Text>
+                    </View>
+                    <View style={{
+                            borderBottomColor: 'black',
+                            borderBottomWidth: StyleSheet.hairlineWidth,
+                        }}
+                    />
+                    <View style={{flexDirection:"row"}}>
+                        <Text style={{fontSize:20, marginTop:5, marginLeft:10,color:fontColor,fontWeight:"700"}}>
+                            Họ
+                        </Text>
+                        <Text style={[styles.species_info]}>
+                            {route.params.family ? route.params.family : null}
+                        </Text>
+                    </View>
+                    <View style={{
+                            borderBottomColor: 'black',
+                            borderBottomWidth: StyleSheet.hairlineWidth,
+                        }}
+                    />
+                    <View style={{flexDirection:"row"}}>
+                        <Text style={{fontSize:20, marginTop:5, marginLeft:10,color:fontColor,fontWeight:"700"}}>
+                            Bộ
+                        </Text>
+                        <Text style={[styles.species_info]}>
+                            {route.params.order ? route.params.order : null}
+                        </Text>
+                    </View>
+                  
+                </View>
                 <View style={{height:10,width:"100%"}}/>
             </ScrollView>
            
@@ -107,6 +144,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize:30,
+        fontWeight:"600"
         // color:fontColor,
     },
     textDetails: {
@@ -121,6 +159,11 @@ const styles = StyleSheet.create({
     des: {
         fontSize:20,
         padding:10,
+    },
+    species_info:{
+        fontSize:20,
+        padding:5,
+        marginLeft:30
     }
 });
 

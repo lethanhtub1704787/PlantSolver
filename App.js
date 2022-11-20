@@ -8,7 +8,6 @@ import Login from './src/screens/Login';
 import { PredictStackNavigator } from './src/navigation/StackNavigator';
 
 const App = () => {
-
   return (
     <NavigationContainer>
       <DrawerNavigator />

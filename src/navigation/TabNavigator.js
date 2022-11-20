@@ -4,6 +4,9 @@ import { View, Text, StyleSheet } from "react-native";
 import { HomeStackNavigator, FindStackNavigator } from "./StackNavigator";
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntIcon from 'react-native-vector-icons/AntDesign'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+
+import Posts from "../screens/Posts";
 const fontColor = "#337954"
 const Tab = createBottomTabNavigator();
 
@@ -23,12 +26,12 @@ const BottomTabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.container}>
               <Entypo name="home" style={{
-                fontSize: 30,
+                fontSize: 35,
                 fontWeight: 500,
                 color: focused ? fontColor : "#ADC8B7"
               }}/>
 
-              <Text style={focused ? styles.iconFocused : styles.iconUnFocused}>Trang chủ</Text>
+              {/* <Text style={focused ? styles.iconFocused : styles.iconUnFocused}>Trang chủ</Text> */}
 
             </View>
           ),
@@ -41,11 +44,26 @@ const BottomTabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.container}>
               <AntIcon name="search1" style={{
-                fontSize: 28,
+                fontSize: 35,
                 color: focused ? fontColor : "#ADC8B7"
               }}/>
 
-              <Text style={focused ? styles.iconFocused : styles.iconUnFocused}>Tìm kiếm </Text>
+              {/* <Text style={focused ? styles.iconFocused : styles.iconUnFocused}>Tìm kiếm </Text> */}
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen name="Social" component={Posts} 
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({focused}) => (
+            <View style={styles.container}>
+              <MaterialCommunityIcons name="post-outline" style={{
+                fontSize: 35,
+                color: focused ? fontColor : "#ADC8B7"
+              }}/>
+
+              {/* <Text style={focused ? styles.iconFocused : styles.iconUnFocused}>Bài viết</Text> */}
             </View>
           ),
         }}

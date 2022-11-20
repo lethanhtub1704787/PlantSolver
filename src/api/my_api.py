@@ -81,7 +81,7 @@ def get_by_name(name):
         return data, 200
         # return _name
     except Exception as e:
-        return "Not found"
+        return f"Error: {e}"
 
 # get by id
 @app.route('/add',methods=['POST'])
@@ -131,4 +131,4 @@ def predict():
 if __name__ == '__main__':
     flower_model = models.load_model('models/flowers-model.h5')
     fruit_model = models.load_model('models/fruits-model.h5')
-    app.run(host="192.168.1.7",port=3000,debug=True)
+    app.run(host="192.168.1.3",port=3000,debug=True)

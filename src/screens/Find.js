@@ -17,11 +17,7 @@ import { View,
     EventEmitter,
     StatusBar
 } from "react-native";
-// import {getDownloadURL, getStorage, ref, uploadBytes} from "firebase/storage";
-// import firebaseConfig from "../components/firebase";
-// import {initializeApp} from 'firebase/app';
-// import { applyActionCode } from "firebase/auth";
-// import { getDatabase, ref, onValue, set, push, get, child  } from 'firebase/database';
+import host from "../../assets/host";
 import CustomHeader from "../components/CustomHeader";
 // import {getImage} from '../backend/Get';
 LogBox.ignoreLogs(["EventEmitter.removeListener"]);
@@ -55,7 +51,7 @@ const Find = ({navigation}) => {
   
     }, [])
     const readData = () => {
-        const apiURL = 'http://192.168.1.7:3000/get';
+        const apiURL = `${host}/get`;
         fetch(apiURL,{
             method: 'GET'
         })
@@ -109,7 +105,7 @@ const Find = ({navigation}) => {
                     name: item.name,
                     info: item.info, 
                     genus: item.genus,
-                    familiy: item.familiy,
+                    family: item.family,
                     order: item.order, 
                     image: item.image,
                 })
