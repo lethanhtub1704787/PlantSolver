@@ -1,0 +1,35 @@
+[
+  {
+    "comments": "999999",
+    "id": 1,
+    "liked": true,
+    "likes": "5000",
+    "post": "Hey there, this is my test for a post of my social app in React Native.",
+    "postImg": "./street.png",
+    "postTime": "4 mins ago",
+    "userImg": "./icons/user.png",
+    "userName": "Jenny Doe"
+  },
+  {
+    "comments": "5",
+    "id": 2,
+    "liked": true,
+    "likes": "14",
+    "post": "Hey there, this is my test for a post of my social app in React Native.",
+    "postImg": "./street.png",
+    "postTime": "4 mins ago",
+    "userImg": "./icons/user.png",
+    "userName": "Jenny Doe"
+  },
+  {
+    "comments": "5",
+    "id": 3,
+    "liked": true,
+    "likes": "14",
+    "post": "Hey there, this is my test for a post of my social app in React Native.",
+    "postImg": "./street.png",
+    "postTime": "4 mins ago",
+    "userImg": "./icons/user.png",
+    "userName": "Jenny Doe"
+  }
+]

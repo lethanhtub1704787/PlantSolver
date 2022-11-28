@@ -5,15 +5,16 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export default firebaseConfig = {
-  apiKey: "AIzaSyCOnADiDujfjX314ff2f3oHJTTORgwePfo",
-  authDomain: "plants-b5240.firebaseapp.com",
-  databaseURL: "https://plants-b5240-default-rtdb.firebaseio.com",
-  projectId: "plants-b5240",
-  storageBucket: "plants-b5240.appspot.com",
-  messagingSenderId: "919696789512",
-  appId: "1:919696789512:web:f6b5ea09ed1f21c52201bd",
-  measurementId: "G-87RKE42TQ9"
+  apiKey: "AIzaSyDlD2RPi05_cfmrwr4aHezS82qZWCKmikM",
+  authDomain: "plants-solver.firebaseapp.com",
+  databaseURL: "https://plants-solver-default-rtdb.firebaseio.com",
+  projectId: "plants-solver",
+  storageBucket: "plants-solver.appspot.com",
+  messagingSenderId: "31539596907",
+  appId: "1:31539596907:web:80cee8e559e100af78ab2e",
+  measurementId: "G-L0N5H9J32Q"
 };
+
 
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);

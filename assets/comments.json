@@ -1,0 +1,24 @@
+[
+  {
+    "post_id" : {
+      "comment_id_1" : {
+        "userId": "tu@gmail.com" ,
+        "userAvatar" : "",
+        "text" : "comment 1",
+        "userName" : "Tu"
+      },
+      "comment_id_2" : {
+        "userId": "tu@gmail.com" ,
+        "userAvatar" : "",
+        "text" : "comment 2",
+        "userName" : "Tu"
+      },
+      "comment_id_3" : {
+        "userId": "tu@gmail.com" ,
+        "userAvatar" : "",
+        "text" : "comment 3",
+        "userName" : "Tu"
+      }
+    }
+  }
+]

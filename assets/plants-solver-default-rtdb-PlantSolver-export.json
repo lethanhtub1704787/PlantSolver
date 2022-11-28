@@ -1,0 +1,246 @@
+{
+  "Plants": {
+    "-NGkn4Y_yv0znDTyXzMA": {
+      "family": "Rosaceae",
+      "genus": "Malus",
+      "id": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FApple.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "The apple tree has its origin in Kazakhstan, but is now found in many regions with a temperate or subtropical climate. Most apples are produced in China. Other important apple producers include USA, Iran, Turkey, Russia, India, Italy and France.",
+      "name": "Apple",
+      "order": "Rosales"
+    },
+    "-NGkn4b3tCPGZAKO-FgS": {
+      "family": "Rosaceae",
+      "genus": "Rosa",
+      "id": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Flowers%2FRose.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg1OTc2MzgsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODU5NzYzOCwiZXhwIjoxNjY4NjAxMjM4LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dQWNYRkUw1rwOKAelYre_vA2ut-9RCTIYDtabM4-CI8t_AZSMsRpqWXVNxV9Po4eJ6eVtPrRmcVMp8Q1y0bc-Nvq8ArZ2g0RdU1tjCjh8BvSKwk1xEYBZkt8OogFp8fpzlb_M0fiRy-JKMbW2jFr_yZp3gc3o7Xh21aRT89ReuLNOpAZtJR-HN7ZFa_K2K6gXHlUbS4UYbF43QsJpBnGCTcoJNNvQuQqyp8wZ4lipM_gbht5nF3l5eDGG64iKLQH5YM2ibJ9sNQFdhxZwGox0Cdrl1OB4nLn31VLrey5ekrIfBIWktBfJIuSx8bjO7R2cH6GBcQ1NnUGagiYE2nZJQ",
+      "info": "Roses are grown as ornamental plants in gardens or to be sold as cut flowers. Essential oils extracted from the petals are used in perfumes. Rose water can be used for cooking, in cosmetics and in religious rituals. Fruits of many species are rich in vitamins and are used in food or sometimes as medicine. In the genus Rosa, there are over 100 species of roses. Garden roses are mostly hybrids.",
+      "name": "Rose",
+      "order": "Rosales"
+    },
+    "-NGkn4eUogNslc8PFgU8": {
+      "family": "Rosaceae",
+      "genus": "Prunus",
+      "id": 3,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FCherry.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Wild cherries grow in most of Europe, western Asia and parts of northern Africa. The cultivated cherry has its origin in Turkey, from where it spread to Europe. Cherries can grow in most temperate climates. Cherries fruits are drupes (stone fruits), best known for their bright red color. Most sweet cherries are eaten fresh, while sour cherries (another species) are used for cooking. Cherry trees are closely related to almonds, peaches, plums, apricots, which all belong to the same genus.",
+      "name": "Cherry",
+      "order": "Rosales"
+    },
+    "-NGkn4hul-SoM7j-BTXP": {
+      "family": "Musaceae",
+      "genus": "Musa",
+      "id": 4,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FBanana.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Bananas have their origin in tropical South-East Asia but are now found in almost all tropical regions of the world. Important banana producing countries include India, Philippines, China, Ecuador, Brazil, Indonesia, Mexico, Costa Rica, Columbia and Thailand.",
+      "name": "Banana",
+      "order": "Zingiberales"
+    },
+    "-NGkn4lMLejd_4OgCbMq": {
+      "family": "Actinidiaceae",
+      "genus": "Actinidia",
+      "id": 5,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FKiwi.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "The kiwifruit, or just kiwi, was first known as “Chinese Gooseberry”. It got its new name from the kiwi bird, one of the national symbols of New Zealand. The kiwi fruit is a fuzzy brown egg-shaped fruit with green flesh.",
+      "name": "Kiwi",
+      "order": "Ericales"
+    },
+    "-NGkn4onydJmM9Wp_mx0": {
+      "family": "Rutaceae",
+      "genus": "Citrus",
+      "id": 6,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FLemon.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "None",
+      "name": "Lemon",
+      "order": "Sapindales"
+    },
+    "-NGkn4sHKynp7kVPpwdb": {
+      "family": "Anacardiaceae",
+      "genus": "Mangifera",
+      "id": 7,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FMango.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Mango is often known as the “apple of the tropics”. It is one of the most popular tropical fruits in the world (together with pineapple, banana, papaya and avocado). Mango fruits are usually eaten ripe, when they are soft and sweet. But some people prefer them unripe, when they are harder with a more sour taste. Mango is also used to produce juice, jam or jelly. Unripe fruits can be used to prepare pickles or chutney.",
+      "name": "Mango",
+      "order": "Sapindales"
+    },
+    "-NGkn4vswbg2-PEkYF19": {
+      "family": "Rosaceae",
+      "genus": "Prunus",
+      "id": 8,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FPeach.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Peaches are known for their soft velvety skin and their sweet aromatic and juicy flesh. Nectarines are a type of peach, but with a smooth skin. Some people think that nectarines are a cross between peach and plum, but this is not true.",
+      "name": "Peach",
+      "order": "Rosales"
+    },
+    "-NGkn4zNHN2bxOhjtooV": {
+      "family": "Sapindaceae",
+      "genus": "Litchi",
+      "id": 9,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FLychee.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Lychee or litchi trees produce their tasty fruits during a very short period each year, but canned fruits can be enjoyed throughout the year. Lychee is an important fruit tree in south China and south-east Asia.",
+      "name": "Lychee",
+      "order": "Sapindales"
+    },
+    "-NGkn51qCdnU0uJ72rIT": {
+      "family": "Lauraceae",
+      "genus": "Persea",
+      "id": 10,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FAvocado.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Avocado originates from Southern Mexico and Central America. The avocado is a very nutritious fruit. The fruits are not sweet, but have a fatty flavor and a creamy texture. Avocado is often used in salads and can be regarded as a vegetable. It is one of the most important tropical fruits.",
+      "name": "Avocado",
+      "order": "Laurales"
+    },
+    "-NGkn55JtYPOqRxo3BnU": {
+      "family": "Rosaceae",
+      "genus": "Fragaria",
+      "id": 11,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FStrawberry.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "When farmers grow strawberries they will often cover the soil with straw to protect the fruits from rot. Maybe this is how the strawberry got its name. The genus Fragaria includes several strawberries.",
+      "name": "Strawberry",
+      "order": "Rosales"
+    },
+    "-NGkn58iV9BVFRJ4oPAe": {
+      "family": "Cactaceae",
+      "genus": "Hylocereus",
+      "id": 12,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FDragonfruit.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Dragon fruits have their origin in Mexico, Central and South America. But they are also grown in South-East Asia (Malaysia, Thailand, Vietnam, Southern China) and in Israel.",
+      "name": "Dragonfruit",
+      "order": "Caryophyllales"
+    },
+    "-NGkn5CFQnO9I82f2kfc": {
+      "family": "Rutaceae",
+      "genus": "Genus",
+      "id": 13,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FOrange.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Oranges originate from south-east Asia but can now be found in most tropical and sub-tropical climates around the world. They belong to the Citrus family. Probably oranges were created long ago as a hybrid between two other Citrus fruits: pomelo and tangerine.",
+      "name": "Orange",
+      "order": "Sapindales"
+    },
+    "-NGkn5FiPsqvcypKB3p5": {
+      "family": "Oxalidaceae",
+      "genus": "Averrhoa",
+      "id": 14,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FStarfruit.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Starfruit or Carambola has a golden-yellow to green color and a slightly tart, acidic, sweet taste. When cut across the fruit shows a 5-pointed star shape, which is why the fruits got their name.",
+      "name": "Starfruit",
+      "order": "Oxalidales"
+    },
+    "-NGkn5JBfnTNSuj2Yy7b": {
+      "family": "Arecaceae",
+      "genus": "Salacca",
+      "id": 15,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FSalak.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Salak originates from Indonesia and Malaysia.",
+      "name": "Salak",
+      "order": "Arecales"
+    },
+    "-NGkn5MfKlTt-zIjDNZz": {
+      "family": "Moraceae",
+      "genus": "Morus",
+      "id": 16,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Fruits%2FMulberry.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg2MTExMjQsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODYxMTEyNCwiZXhwIjoxNjY4NjE0NzI0LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfTyKn0VMtA7xBW6fIP0DXdw17F6kQNLOck2EXjFdJUlEEaSlGyqLQE62m2j0euVLfi2mDvsEmWzOrxu0_Xfzd1tbzGRQLbNN7kjXY9TbWp4lqVykz6w0ETdCpt7oMkG8DJ_qfXk4k05pyunrDVUeippa3wXoumVgQiJt3FJSiphGkEIYdJ4PrjKiZlOEZbukkWjrMsA9sxY3lk2JM2t4vD8L-F3bW-4Qde7enAPdADtf0Grhd0RsPB8WcEhGIjLmspuIBeD_gdZoBuJ2-BgscgROeg0JhujTrO72Oibso9TpscO_uXdAPNcy6NcmE1__X1fCLe9zdDSSSlFAknTcg",
+      "info": "Within the genus Morus, there are several species of Mulberries. While the mulberry produces edible fruits, it is better known as a fodder that is used to grow silk worms, which in turn are used to produce silk. Mulberry trees are also grown as ornamental plants in parks and gardens.",
+      "name": "Mulberry",
+      "order": "Rosales"
+    },
+    "-NGkn5Q8Yg1BQp-xlZ-C": {
+      "family": "",
+      "genus": "",
+      "id": 17,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Flowers%2FDandelion.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg1OTc2MzgsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODU5NzYzOCwiZXhwIjoxNjY4NjAxMjM4LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dQWNYRkUw1rwOKAelYre_vA2ut-9RCTIYDtabM4-CI8t_AZSMsRpqWXVNxV9Po4eJ6eVtPrRmcVMp8Q1y0bc-Nvq8ArZ2g0RdU1tjCjh8BvSKwk1xEYBZkt8OogFp8fpzlb_M0fiRy-JKMbW2jFr_yZp3gc3o7Xh21aRT89ReuLNOpAZtJR-HN7ZFa_K2K6gXHlUbS4UYbF43QsJpBnGCTcoJNNvQuQqyp8wZ4lipM_gbht5nF3l5eDGG64iKLQH5YM2ibJ9sNQFdhxZwGox0Cdrl1OB4nLn31VLrey5ekrIfBIWktBfJIuSx8bjO7R2cH6GBcQ1NnUGagiYE2nZJQ",
+      "info": "",
+      "name": "Dandelion",
+      "order": ""
+    },
+    "-NGkn5TbrrvToBTldhwo": {
+      "family": "",
+      "genus": "",
+      "id": 18,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Flowers%2FDaisy.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg1OTc2MzgsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODU5NzYzOCwiZXhwIjoxNjY4NjAxMjM4LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dQWNYRkUw1rwOKAelYre_vA2ut-9RCTIYDtabM4-CI8t_AZSMsRpqWXVNxV9Po4eJ6eVtPrRmcVMp8Q1y0bc-Nvq8ArZ2g0RdU1tjCjh8BvSKwk1xEYBZkt8OogFp8fpzlb_M0fiRy-JKMbW2jFr_yZp3gc3o7Xh21aRT89ReuLNOpAZtJR-HN7ZFa_K2K6gXHlUbS4UYbF43QsJpBnGCTcoJNNvQuQqyp8wZ4lipM_gbht5nF3l5eDGG64iKLQH5YM2ibJ9sNQFdhxZwGox0Cdrl1OB4nLn31VLrey5ekrIfBIWktBfJIuSx8bjO7R2cH6GBcQ1NnUGagiYE2nZJQ",
+      "info": "",
+      "name": "Daisy",
+      "order": ""
+    },
+    "-NGkn5X6lHch0mY1vwP5": {
+      "family": "",
+      "genus": "",
+      "id": 19,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Flowers%2FSunflower.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg1OTc2MzgsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODU5NzYzOCwiZXhwIjoxNjY4NjAxMjM4LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dQWNYRkUw1rwOKAelYre_vA2ut-9RCTIYDtabM4-CI8t_AZSMsRpqWXVNxV9Po4eJ6eVtPrRmcVMp8Q1y0bc-Nvq8ArZ2g0RdU1tjCjh8BvSKwk1xEYBZkt8OogFp8fpzlb_M0fiRy-JKMbW2jFr_yZp3gc3o7Xh21aRT89ReuLNOpAZtJR-HN7ZFa_K2K6gXHlUbS4UYbF43QsJpBnGCTcoJNNvQuQqyp8wZ4lipM_gbht5nF3l5eDGG64iKLQH5YM2ibJ9sNQFdhxZwGox0Cdrl1OB4nLn31VLrey5ekrIfBIWktBfJIuSx8bjO7R2cH6GBcQ1NnUGagiYE2nZJQ",
+      "info": "",
+      "name": "Sunflower",
+      "order": ""
+    },
+    "-NGkn5_cWBMgsMH8w5dQ": {
+      "family": "",
+      "genus": "",
+      "id": 20,
+      "image": "https://firebasestorage.googleapis.com/v0/b/plants-solver.appspot.com/o/Flowers%2FTulip.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGxhbnRzLXNvbHZlciIsImF1ZCI6InBsYW50cy1zb2x2ZXIiLCJhdXRoX3RpbWUiOjE2Njg1OTc2MzgsInVzZXJfaWQiOiJHaHY3TXRFQnFGY2I4RnFlT3lESEVGanBLMVAyIiwic3ViIjoiR2h2N010RUJxRmNiOEZxZU95REhFRmpwSzFQMiIsImlhdCI6MTY2ODU5NzYzOCwiZXhwIjoxNjY4NjAxMjM4LCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3RAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dQWNYRkUw1rwOKAelYre_vA2ut-9RCTIYDtabM4-CI8t_AZSMsRpqWXVNxV9Po4eJ6eVtPrRmcVMp8Q1y0bc-Nvq8ArZ2g0RdU1tjCjh8BvSKwk1xEYBZkt8OogFp8fpzlb_M0fiRy-JKMbW2jFr_yZp3gc3o7Xh21aRT89ReuLNOpAZtJR-HN7ZFa_K2K6gXHlUbS4UYbF43QsJpBnGCTcoJNNvQuQqyp8wZ4lipM_gbht5nF3l5eDGG64iKLQH5YM2ibJ9sNQFdhxZwGox0Cdrl1OB4nLn31VLrey5ekrIfBIWktBfJIuSx8bjO7R2cH6GBcQ1NnUGagiYE2nZJQ",
+      "info": "",
+      "name": "Tulip",
+      "order": ""
+    }
+  },
+  "Posts": [
+    {
+      "comments": "999999",
+      "id": 1,
+      "liked": true,
+      "likes": "5000",
+      "post": "Hey there, this is my test for a post of my social app in React Native.",
+      "postImg": "./street.png",
+      "postTime": "4 mins ago",
+      "userImg": "./icons/user.png",
+      "userName": "Jenny Doe"
+    },
+    {
+      "comments": "5",
+      "id": 2,
+      "liked": true,
+      "likes": "14",
+      "post": "Hey there, this is my test for a post of my social app in React Native.",
+      "postImg": "./street.png",
+      "postTime": "4 mins ago",
+      "userImg": "./icons/user.png",
+      "userName": "Jenny Doe"
+    },
+    {
+      "comments": "5",
+      "id": 3,
+      "liked": true,
+      "likes": "14",
+      "post": "Hey there, this is my test for a post of my social app in React Native.",
+      "postImg": "./street.png",
+      "postTime": "4 mins ago",
+      "userImg": "./icons/user.png",
+      "userName": "Jenny Doe"
+    }
+  ],
+  "Users": [
+    {
+      "email": "tu",
+      "info": {
+        "avatar": "",
+        "name": "tu"
+      },
+      "password": "1",
+      "posts": ""
+    },
+    {
+      "email": "tu1",
+      "info": {
+        "avatar": "",
+        "name": "tu"
+      },
+      "password": "1"
+    },
+    {
+      "email": "tu2",
+      "info": {
+        "avatar": "",
+        "name": "tu"
+      },
+      "password": "1"
+    }
+  ]
+}

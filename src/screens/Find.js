@@ -19,8 +19,12 @@ import { View,
 } from "react-native";
 import host from "../../assets/host";
 import CustomHeader from "../components/CustomHeader";
-// import {getImage} from '../backend/Get';
-LogBox.ignoreLogs(["EventEmitter.removeListener"]);
+import Loading from "../components/Loading";
+import {getDatabase,ref,onValue,get,push,set,child,querySnapshot} from "firebase/database"
+import {initializeApp} from "firebase/app"
+import firebaseConfig from "../components/firebase";
+initializeApp(firebaseConfig)
+// LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 const bg_image = 'https://s2.best-wallpaper.net/wallpaper/iphone/1807/Red-rose-green-leaves-water-drops_iphone_1080x1920.jpg';
 
 const spacing = 20;
@@ -28,7 +32,7 @@ const avatar_size = 100;
 const item_margin_bottom = spacing / 2
 const item_size = avatar_size + spacing + item_margin_bottom;
 const heightSceen = Dimensions.get("window").height
-// const avatar = {uri : "http://localhost/img/cay-co-canh-2.jpg"}
+
 
 const Find = ({navigation}) => {
 
@@ -38,18 +42,32 @@ const Find = ({navigation}) => {
     const [data, setdata] = useState([]);
     const [isLoading, setisLoading] = useState(true);
     const [search,setSearch] = useState('');
-    const [img,setimg] = useState("")
-    // const storage = getStorage();
-    // const [imgUrl,setimgUrl] = useState("")
+
+    const reference = ref(getDatabase(), 'PlantSolver/Plants');
 
     useEffect(() => {
-        // const subscription = Dimensions.addEventListener('change', ()=>{})
-        readData();
-        // return () => {
-        //     subscription.remove()
-        // }
-  
+       
+        onValue(reference, (snapshot) => {
+            let array = []
+            snapshot.forEach(function(childSnapshot) {
+                let key = childSnapshot.key;
+                // console.log(key)
+                let childData = childSnapshot.val();
+                let finalData = Object.assign(childData, {key: key});
+                // console.log(finalData)
+                array.push(finalData);
+            //   console.log(array)
+            });
+            setdata(array)
+            setfilteredData(array)
+        })
+        setisLoading(false)
     }, [])
+
+    // useEffect(() => {
+    //     readData();
+    // }, [])
+
     const readData = () => {
         const apiURL = `${host}/get`;
         fetch(apiURL,{
@@ -57,6 +75,7 @@ const Find = ({navigation}) => {
         })
         .then((res) => res.json())
         .then((resJson) => {
+            // console.log(typeof(resJson))
             setdata(resJson)
             setfilteredData(resJson)
         }).catch((error) => {
@@ -64,7 +83,6 @@ const Find = ({navigation}) => {
         }).finally(() => setisLoading(false))
             // console.log(data)
     }
-
     const searchFilter = (text) => {
         if(text){
             const newData = data.filter((item) => {
@@ -141,8 +159,8 @@ const Find = ({navigation}) => {
     }
 
     return (
-        
         <SafeAreaView style={styles.container}>
+            <Loading loading={isLoading}/>
             <CustomHeader title="Tìm kiếm" isBack={false} navigation={navigation}/>
             <View style={styles.headerContainer}>
             
@@ -164,19 +182,15 @@ const Find = ({navigation}) => {
                         style={StyleSheet.absoluteFill}
                         blurRadius={20}
                     />
-                    {
-                        isLoading ? <ActivityIndicator/> : (
-                        <Animated.FlatList
-                            data={filteredData}
-                            renderItem={renderItem}
-                            keyExtractor={item => `key-${item.id}`}
-                            onScroll={Animated.event(
-                                [{nativeEvent: {contentOffset: {y: scrollY}}}],
-                                {useNativeDriver: true}
-                            )}
-                        />
-                        )         
-                    }
+                    <Animated.FlatList
+                        data={filteredData}
+                        renderItem={renderItem}
+                        // keyExtractor={item => `key-${item.id}`}
+                        onScroll={Animated.event(
+                            [{nativeEvent: {contentOffset: {y: scrollY}}}],
+                            {useNativeDriver: true}
+                        )}
+                    />
                 </View>
             </View>
         </SafeAreaView>

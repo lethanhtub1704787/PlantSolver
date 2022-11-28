@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Button, Text, StyleSheet, TextInput, Platform,Image,TouchableOpacity, SafeAreaView, StatusBar,Alert} from "react-native";
 import { useState,useEffect } from 'react';
 import * as ImagePicker from 'expo-image-picker';
@@ -7,6 +7,8 @@ import Loading from "../components/Loading";
 import ImagePickerModal from "../components/Image-Picker-Modal";
 import PlantSelect_Modal from "../components/PlantSelect_Modal";
 import host from "../../assets/host";
+import { AuthContext } from "../context/AuthContext";
+
 
 const bg_image = 'https://s2.best-wallpaper.net/wallpaper/iphone/1807/Red-rose-green-leaves-water-drops_iphone_1080x1920.jpg';
 
@@ -16,6 +18,9 @@ const Home = ({navigation}) => {
     const [typePicked,settypePicked] = useState("")
     const [typePicker,settypePicker] = useState(false)
     const [imgPicker,setimgPicker] = useState(false)
+    const {userInfo} = useContext(AuthContext)
+
+
     const getJson = (name) => {
         const apiURL = `${host}/get_name/${name}`;
         fetch(apiURL,{
@@ -77,6 +82,20 @@ const Home = ({navigation}) => {
         });
     }
 
+    // const handle_image = () => {
+    //     let result = selectImage()
+    //     setimgPicker(false)   
+    //     settypePicker(true)
+    //     setimgPicked(result)
+    // }
+
+    // const handle_camera = () => {
+    //     let result = openCamera()
+    //     setimgPicker(false)   
+    //     settypePicker(true)
+    //     setimgPicked(result);
+    // }
+
     const selectImage = async () => { 
         let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
@@ -125,7 +144,7 @@ const Home = ({navigation}) => {
     }
 
     // const test = () => { 
-    //     settypePicker(true)
+    //     console.log(userInfo)
     // }
 
     // const consolelog = () => {
@@ -185,8 +204,8 @@ const Home = ({navigation}) => {
              
                 </TouchableOpacity>
             </View>
-            {/* <Button title="Test" onPress={() => test()}/>
-            <View> 
+            {/* <Button title="Log token" onPress={() => test()}/> */}
+            {/* <View> 
                 <Button title="Log" onPress={() => consolelog()}/>
             </View> */}
            
@@ -203,10 +222,7 @@ const Home = ({navigation}) => {
             onFruitTypePress={() => set_TypePicked("fruit")}
             onFlowerTypePress={() => set_TypePicked("flower")}
         />
-
-        {
-            scanning ? <Loading/> : null
-        }
+        <Loading loading={scanning}/>
         </>
     );
 };

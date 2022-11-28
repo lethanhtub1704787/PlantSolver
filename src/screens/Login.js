@@ -1,4 +1,4 @@
-import React, {useState, createRef} from 'react';
+import React, {useState, createRef, useContext} from 'react';
 import {
   StyleSheet,
   TextInput,
@@ -13,75 +13,30 @@ import {
   StatusBar
 } from 'react-native';
  
-import { AsyncStorage } from 'react-native';
-import CustomHeader from '../components/CustomHeader';
- 
-import Loader from '../components/Loader';
+import Loading from '../components/Loading';
+import Back from 'react-native-vector-icons/Ionicons';
+import { AuthContext } from '../context/AuthContext';
+
+
 const bg_image = 'https://s2.best-wallpaper.net/wallpaper/iphone/1807/Red-rose-green-leaves-water-drops_iphone_1080x1920.jpg';
 const Login = ({navigation}) => {
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [errortext, setErrortext] = useState('');
- 
-  const passwordInputRef = createRef();
- 
-  const handleSubmitPress = () => {
-    setErrortext('');
-    if (!userEmail) {
-      alert('Xin hãy điền Email');
-      return;
-    }
-    if (!userPassword) {
-      alert('Xin hãy điền Mật khẩu');
-      return;
-    }
-    setLoading(true);
-    let dataToSend = {email: userEmail, password: userPassword};
-    let formBody = [];
-    for (let key in dataToSend) {
-      let encodedKey = encodeURIComponent(key);
-      let encodedValue = encodeURIComponent(dataToSend[key]);
-      formBody.push(encodedKey + '=' + encodedValue);
-    }
-    formBody = formBody.join('&');
- 
-    fetch('http://localhost:3000/api/user/login', {
-      method: 'POST',
-      body: formBody,
-      headers: {
-        //Header Defination
-        'Content-Type':
-        'application/x-www-form-urlencoded;charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .then((responseJson) => {
-        //Hide Loader
-        setLoading(false);
-        console.log(responseJson);
-        // If server response message same as Data Matched
-        if (responseJson.status === 'success') {
-          AsyncStorage.setItem('user_id', responseJson.data.email);
-          console.log(responseJson.data.email);
-          navigation.replace('DrawerNavigationRoutes');
-        } else {
-          setErrortext(responseJson.msg);
-          console.log('Please check your email id or password');
-        }
-      })
-      .catch((error) => {
-        //Hide Loader
-        setLoading(false);
-        console.error(error);
-      });
-  };
- 
+  const {isLoading,login,errorText} = useContext(AuthContext)
+
   return (
-    <SafeAreaView style={styles.mainBody}>
-    <CustomHeader title="Đăng nhập" isBack={true} navigation={navigation}/>
-      <Loader loading={loading} />
-    
+    <View style={styles.mainBody}>
+      <Loading loading={isLoading}/> 
+      <Image
+            source={{uri: bg_image}}
+            style={StyleSheet.absoluteFill}
+            blurRadius={80}
+        />
+      <TouchableOpacity style={{justifyContent:"center",marginTop:StatusBar.currentHeight}}
+            onPress={() => navigation.goBack()}
+        >
+            <Back name="arrow-back" style={{fontSize:35,marginLeft:10,color:"white"}}/>
+        </TouchableOpacity>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
@@ -89,28 +44,15 @@ const Login = ({navigation}) => {
           justifyContent: 'center',
           alignContent: 'center',
         }}>
-             <Image
-            source={{uri: bg_image}}
-            style={StyleSheet.absoluteFill}
-            blurRadius={40}
-        />
-        <View>
        
+
+        <View>
         <KeyboardAvoidingView enabled>
             <View style={{alignItems:"center",marginBottom:80}}>
                 <Text style={{fontWeight:"700",fontSize:45,color:"#7DE24E"}}>PlantSolver</Text>
             </View>
+ 
             <View style={{alignItems: 'center'}}>
-                
-              {/* <Image
-                source={require('../Image/aboutreact.png')}
-                style={{
-                  width: '50%',
-                  height: 100,
-                  resizeMode: 'contain',
-                  margin: 30,
-                }}
-              /> */}
             </View>
             <View style={styles.SectionStyle}>
               <TextInput
@@ -118,15 +60,11 @@ const Login = ({navigation}) => {
                 onChangeText={(UserEmail) =>
                   setUserEmail(UserEmail)
                 }
-                placeholder="Nhập Email" //dummy@abc.com
+                placeholder="Email" //dummy@abc.com
                 placeholderTextColor="#8b9cb5"
                 autoCapitalize="none"
                 keyboardType="email-address"
                 returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current &&
-                  passwordInputRef.current.focus()
-                }
                 underlineColorAndroid="#f000"
                 blurOnSubmit={false}
               />
@@ -137,44 +75,46 @@ const Login = ({navigation}) => {
                 onChangeText={(UserPassword) =>
                   setUserPassword(UserPassword)
                 }
-                placeholder="Nhập mật khẩu" //12345
+                placeholder="Mật khẩu" //12345
                 placeholderTextColor="#8b9cb5"
                 keyboardType="default"
-                ref={passwordInputRef}
-                onSubmitEditing={Keyboard.dismiss}
                 blurOnSubmit={false}
                 secureTextEntry={true}
                 underlineColorAndroid="#f000"
                 returnKeyType="next"
               />
             </View>
-            {errortext != '' ? (
+            {errorText != '' ? (
               <Text style={styles.errorTextStyle}>
-                {errortext}
+                {errorText}
               </Text>
             ) : null}
             <TouchableOpacity
               style={styles.buttonStyle}
               activeOpacity={0.5}
-              onPress={handleSubmitPress}>
+              onPress={() => login(userEmail,userPassword)}>
               <Text style={[styles.buttonTextStyle,styles.textSize]}>Đăng nhập</Text>
             </TouchableOpacity>
-            <Text
-              style={[styles.registerTextStyle,{fontSize:16,color:"#FFFFFF"}]}
-            >
-              Chưa có tài khoản?
-            </Text>
-            <TouchableOpacity
-              style={[styles.buttonStyle]}
-              activeOpacity={0.5}
-              onPress={() => navigation.navigate('RegisterScreen')}
-            >
-              <Text style={[styles.buttonTextStyle,styles.textSize]}>Đăng ký</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection:"row",justifyContent:"center"}}>
+              <Text
+                style={[styles.registerTextStyle,{fontSize:16,color:"#FFFFFF"}]}
+              >
+                Chưa có tài khoản?
+              </Text>
+              <TouchableOpacity
+                style={{}}
+                activeOpacity={0.5}
+                onPress={() => navigation.navigate('SignUp')}
+              >
+                <Text style={[styles.buttonTextStyle,styles.textSize,{color:"#7DE24E"}]}>Đăng ký</Text>
+              </TouchableOpacity>
+            </View>
+      
+            
           </KeyboardAvoidingView>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 export default Login;
@@ -185,7 +125,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
     alignContent: 'center',
-    marginTop:StatusBar.currentHeight,
+    // backgroundColor: '#307ecc',
+    // marginTop:StatusBar.currentHeight,
   },
   SectionStyle: {
     flexDirection: 'row',

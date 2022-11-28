@@ -1,0 +1,34 @@
+[
+    {
+      "email": "tu",
+      "password": "1",
+      "posts": {
+     
+      },
+      "info": {
+        "name" : "tu",
+        "avatar" : ""
+      }
+    },
+    {
+      "email": "tu1",
+      "password": "1",
+      "posts": {
+     
+      },
+      "info": {
+        "name" : "tu",
+        "avatar" : ""
+      }
+    },{
+        "email": "tu2",
+        "password": "1",
+        "posts": {
+       
+        },
+        "info": {
+          "name" : "tu",
+          "avatar" : ""
+        }
+    }
+  ]

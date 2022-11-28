@@ -1,50 +1,96 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import BottomTabNavigator from "./TabNavigator";
 import Login from "../screens/Login"
 import Profile from "../screens/Profile"
-import NewPlant from "../screens/NewPlant"
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import { SafeAreaView, ScrollView,TouchableOpacity,Text,StatusBar,StyleSheet,View, Image } from "react-native";
+import LogoutIcon from 'react-native-vector-icons/MaterialIcons'
+import { SafeAreaView, ScrollView,TouchableOpacity,Text,StatusBar,StyleSheet,View, Image, Alert } from "react-native";
+import { Auth } from "./StackNavigator";
+import { AuthContext } from "../context/AuthContext";
 
 const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props) => {
+  const {logout,userInfo} = useContext(AuthContext)
+  const openLogoutModal = () => {
+    props.navigation.toggleDrawer();
+    Alert.alert(
+      'Bạn muốn đăng xuất?',
+      '',
+      [
+        {
+          text: 'Xác nhận',
+          onPress: () => {
+            logout()
+            props.navigation.navigate('Home');
+          },
+        },
+        {
+          text: 'Hủy',
+          onPress: () => {
+            return null;
+          },
+        },  
+      ],
+      {cancelable: false},
+    );
+  }
+  
   return(
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={{marginTop:20}}/>
+        <View>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Home")}
+            style={styles.tabContainer}
+          >
+            <FontAwesome name="home" style={styles.icon}/>
+            <View style={styles.tabButton}>
+              <Text style={styles.text}>Trang chủ</Text>
+            </View>
+          </TouchableOpacity>
+          {
+            !userInfo ?
+            (
+              <TouchableOpacity onPress={() => props.navigation.navigate("Auth")}
+              style={styles.tabContainer}
+              >
+              <FontAwesome name="user-circle-o" style={styles.icon}/>
+              <View style={styles.tabButton}>
+                <Text style={styles.text}>Đăng nhập</Text>
+              </View>
+              </TouchableOpacity>
+            )
+            :
+            (
+            <>
+              <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}
+                  style={styles.tabContainer}
+                >
+                  <FontAwesome name="user-circle-o" style={styles.icon} />
+                  <View style={styles.tabButton}>
+                    <Text style={styles.text}>Hồ sơ</Text>
+                  </View>
+                </TouchableOpacity><View
+                  style={{ flex: 1, height: 50, flexDirection: "row", alignItems: 'flex-end', backgroundColor: "green" }}
+                >
+                    <TouchableOpacity onPress={openLogoutModal}
+                      style={styles.tabContainer}
+                    >
+                      <LogoutIcon name="logout" style={styles.icon} />
+                      <View style={styles.tabButton}>
+                        <Text style={{ fontSize: 20 }}>Đăng xuất</Text>
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+              </> 
+            )
 
-        <TouchableOpacity onPress={() => props.navigation.navigate("Trang chủ")}
-          style={styles.tabContainer}
-        >
-          <FontAwesome name="home" style={styles.icon}/>
-          <View style={styles.tabButton}>
-            <Text style={styles.text}>Trang chủ</Text>
-          </View>
-        </TouchableOpacity>
-        
-        <TouchableOpacity onPress={() => props.navigation.navigate("Đăng nhập")}
-          style={styles.tabContainer}
-        >
-          <FontAwesome name="user-circle-o" style={styles.icon}/>
-          <View style={styles.tabButton}>
-            <Text style={styles.text}>Đăng nhập</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => props.navigation.navigate("Hồ sơ")}
-          style={styles.tabContainer}
-        >
-          <Image style={{width:25,height:25,marginLeft:5}} 
-            source={require("../../assets/icons/home.png")}
-            resizeMode="contain"
-          />
-          <View style={styles.tabButton}>
-            <Text style={{fontSize:20}}>Hồ sơ</Text>
-          </View>
-        </TouchableOpacity>
+          }
+         
+        </View>
       </ScrollView>
    
      
@@ -52,7 +98,10 @@ const CustomDrawerContent = (props) => {
   )
 }
 
+
+
 const DrawerNavigator = () => {
+  const {userInfo} = useContext(AuthContext)
   return (
     <Drawer.Navigator
       initialRouteName="Trang chủ"
@@ -62,15 +111,18 @@ const DrawerNavigator = () => {
           backgroundColor:"transparent",
           elevation: 0,
           shadowOpacity: 0,
-          backgroundColor: "#9AC4F8"
+          // backgroundColor: "#9AC4F8"
         },
       }}
       drawerContent={props => CustomDrawerContent(props)}
     >
-      <Drawer.Screen name="Trang chính" component={BottomTabNavigator} />
-      <Drawer.Screen name="Đăng nhập" component={Login} />
-      {/* <Drawer.Screen name="Hồ sơ" component={Profile} />
-      <Drawer.Screen name="Thêm cây" component={NewPlant} /> */}
+      <Drawer.Screen name="Main" component={BottomTabNavigator} />
+      {/* <Drawer.Screen name="Auth" component={Auth} /> */}
+      {
+        !userInfo ? ( <Drawer.Screen name="Auth" component={Auth} />) : null
+      }
+
+      {/* <Drawer.Screen name="Thêm cây" component={NewPlant} /> */} 
 
     </Drawer.Navigator>
   );
@@ -86,6 +138,7 @@ const styles = StyleSheet.create({
     flex:1, 
     flexDirection:"row",
     padding:10,
+    // backgroundColor:"red"
   },
   tabButton:{
     fontSize:20,

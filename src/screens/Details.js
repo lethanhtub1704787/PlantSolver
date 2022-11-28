@@ -32,12 +32,12 @@ const ReadMore = ({children, maxCharCount = 120}) => {
 
 const Details = ({navigation,route}) => {
     // console.log("route:",route.params)
-    useEffect(() => {
-        const subscription = AppState.addEventListener('change', ()=>{})
-        return () => {
-          subscription.remove()
-        }
-    }, [])
+    // useEffect(() => {
+    //     const subscription = AppState.addEventListener('change', ()=>{})
+    //     return () => {
+    //       subscription.remove()
+    //     }
+    // }, [])
     return (
         <SafeAreaView style={styles.totalContainer}>
           

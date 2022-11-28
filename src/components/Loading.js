@@ -3,12 +3,17 @@ import React from 'react'
 import LottieView from 'lottie-react-native'
 
 
-const Loading = () => {
+const Loading = ({loading}) => {
   return (
-    <View style={[StyleSheet.absoluteFillObject,styles.container]}>
-      <LottieView source={require('../../assets/loading.json')} autoPlay loop/>
-      
-    </View>
+    <>
+      {loading==true ? (
+        <View style={[StyleSheet.absoluteFillObject,styles.container]}>
+          <LottieView source={require('../../assets/loading.json')} autoPlay loop/>
+          </View>
+        )
+        : null
+      }
+    </>
   )
 }
 
