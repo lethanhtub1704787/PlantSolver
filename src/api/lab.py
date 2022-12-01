@@ -58,7 +58,36 @@ def ODict_to_Json(ODict):
     toJSON = list(ODict)
     return toJSON
 
+def merge_two_dicts(x, y):
+    z = x.copy()   # start with keys and values of x
+    z.update(y)    # modifies z with keys and values of y
+    return z
 
+def get_Post_LikeCount(id):
+
+
+def merge_Posts_Users():
+    final_post_data = []
+    data = db.child("PlantSolver").child("Posts").get()
+    post_Data = ODict_to_Json(data)
+    # print(post_Data)
+    for index,user in enumerate(post_Data):
+        key = data[index].key()
+        
+        data_with_key_merge = merge_two_dicts(user,{"key":key})
+        # print(merge_key)
+        uid = user['uid']
+
+        userInfo = db.child("PlantSolver").child("Users").order_by_child("email").equal_to(uid).get()
+        userInfo = ODict_to_Json(userInfo)[0]
+        userInfo.pop('password', None)
+
+        mergeData = merge_two_dicts(data_with_key_merge,userInfo)
+        final_post_data.append(mergeData)
+        # print(mergeData)
+    print(final_post_data)
+    return final_post_data
+merge_Posts_Users()
 # check_mail =  db.child("PlantSolver").child("Users").order_by_child("email").equal_to("tu").get()
 # check_mail = check_mail.val() # this is OrderedDict
 # check_mail = check_mail.values() # this is ODict Value

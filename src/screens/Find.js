@@ -96,8 +96,20 @@ const Find = ({navigation}) => {
         }
         setSearch(text);
     }
+
+    const navigateToDetails = (item) => {
+        navigation.navigate("Chi tiết", {
+            id: item.id,
+            name: item.name,
+            info: item.info, 
+            genus: item.genus,
+            family: item.family,
+            order: item.order, 
+            image: item.image,
+        })
+    }
     
-    renderItem = ({item, index}) => {
+    const renderItem = ({item, index}) => {
       const scale = scrollY.interpolate({
         inputRange:[
           -1, 0,
@@ -116,18 +128,7 @@ const Find = ({navigation}) => {
       })
         return (
           <TouchableOpacity 
-            onPress={() =>{
-                // console.log("item:",typeof(item))
-                navigation.navigate("Chi tiết", {
-                    id: item.id,
-                    name: item.name,
-                    info: item.info, 
-                    genus: item.genus,
-                    family: item.family,
-                    order: item.order, 
-                    image: item.image,
-                })
-            } }
+            onPress={() => navigateToDetails(item)}
           >
             <Animated.View style={{
                 flexDirection:'row',
@@ -185,7 +186,7 @@ const Find = ({navigation}) => {
                     <Animated.FlatList
                         data={filteredData}
                         renderItem={renderItem}
-                        // keyExtractor={item => `key-${item.id}`}
+                        keyExtractor={(item) => item.key}
                         onScroll={Animated.event(
                             [{nativeEvent: {contentOffset: {y: scrollY}}}],
                             {useNativeDriver: true}

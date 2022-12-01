@@ -9,15 +9,18 @@ import * as MyStorage from "firebase/storage"
 import firebaseConfig from "../components/firebase";
 import {initializeApp} from "firebase/app"
 import { uploadBytes,getDownloadURL } from 'firebase/storage'
+import Loading from '../components/Loading'
 initializeApp(firebaseConfig)
 const widthScreen = Dimensions.get("window").width
 const moment = require("moment")
 const AddPost = ({navigation,route}) => {
     // const {userInfo} = useContext(AuthContext)
+    const [isLoading,setisLoading] = useState(false)
     const [imgPicker,setimgPicker] = useState(false)
     const [post,setPost] = useState('')
     const [imgPicked,setimgPicked] = useState('')
-    const [imgUrl,setimgUrl] = useState('')
+    
+    const user = route.params
     const selectImage = async () => { 
         let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
@@ -28,11 +31,13 @@ const AddPost = ({navigation,route}) => {
 
         let pickerResult = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
+            quality:1
         });
         
-        if(!pickerResult.cancelled){
+        if(!pickerResult.canceled){
             setimgPicker(false)   
-            setimgPicked(pickerResult)
+            let uri = pickerResult.assets[0].uri
+            setimgPicked(uri)
         }
     }
     const openCamera = async ()  => {
@@ -44,53 +49,39 @@ const AddPost = ({navigation,route}) => {
             return;
         }
 
-        const cameraResult = await ImagePicker.launchCameraAsync();
+        const cameraResult = await ImagePicker.launchCameraAsync(
+            {
+                quality:1
+            }
+        );
 
-        if (!cameraResult.cancelled) {
+        if (!cameraResult.canceled) {
             setimgPicker(false)   
-            setimgPicked(cameraResult);
+            let uri = cameraResult.assets[0].uri
+            setimgPicked(uri)
         }
     }
 
-    // const push_post = async (userId, content, Image) => {
-    //     let target_ref = ref(getDatabase(), 'PlantSolver/Posts');
-    //     const newPostKey = push(target_ref).key;
-    //     if(Image){
-    //         await uploadImage(Image,newPostKey)
-    //     }
-    //     const postData = {
-    //         content: content,
-    //         uid: userId,
-    //         image: imgUrl,
-    //         likeCount: 0,
-    //         cmtCount: 0,
-    //         timeStamp: moment().format()
-    //     };
-    //       // Write the new post's data simultaneously in the posts list and the user's post list.
-    //     const updates = {};
-    //     updates[newPostKey] = postData;
+    function getCurrentTime(){
+        // moment.locale('vi');
+        let time = moment().format()
+        return time
+    }
 
-    //     // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-
-    //     return update(target_ref, updates);
-    // }
-
-    // const uploadImage = async (image,name) => {
-
-    // }   
-
-    const handlePost = async (user,content,imgPicked) => {
+    const handlePost = async (content,imgPicked) => {
         if(!content){
             alert("Xin nhập nội dung")
             return
         }
+        setisLoading(true)
+    
         try{
             const target_ref = ref(getDatabase(), 'PlantSolver/Posts');
             const newPostKey = push(target_ref).key;
             const my_storage = MyStorage.getStorage()
             const upload_ref = MyStorage.ref(my_storage,'Posts/'+newPostKey+".jpg")
             // console.log("ref:",ref)
-            const img = await fetch(imgPicked.uri)
+            const img = await fetch(imgPicked)
             const bytes = await img.blob()
             await uploadBytes(upload_ref,bytes).then((snapshot) => {
                 let url_ref = snapshot.ref
@@ -102,7 +93,8 @@ const AddPost = ({navigation,route}) => {
                             image: url,
                             likeCount: 0,
                             cmtCount: 0,
-                            timeStamp: moment().format()
+                            timeStamp: getCurrentTime(),
+                            liked:""
                         };
                           // Write the new post's data simultaneously in the posts list and the user's post list.
                         const updates = {};
@@ -115,16 +107,19 @@ const AddPost = ({navigation,route}) => {
         }catch(err){
             alert(err)
         }
+        setisLoading(false)
+       
         navigation.goBack()
     }
 
     return (
     <>
+        <Loading loading={isLoading}/>
         <View style={styles.header}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
                 <BackIcon name="arrow-back" style={styles.backIcon}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => handlePost(route.params,post,imgPicked)}>
+            <TouchableOpacity onPress={() => handlePost(post,imgPicked)}>
                 <Text style={styles.postButton}>Đăng</Text>
             </TouchableOpacity>
         </View>
@@ -143,7 +138,7 @@ const AddPost = ({navigation,route}) => {
                 <TouchableOpacity style={styles.imageContainer} onPress={() => setimgPicker(true)}>
                     {
                         imgPicked ? 
-                        <Image source={{uri : imgPicked.uri}}
+                        <Image source={{uri : imgPicked}}
                             style={styles.image_box} 
                         /> 
                     : (

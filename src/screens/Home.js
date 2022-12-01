@@ -55,7 +55,7 @@ const Home = ({navigation}) => {
         const url = `${host}/predict`;
         const formData = new FormData();
         formData.append('image',{
-            uri: imgPicked.uri,
+            uri: imgPicked,
             name: `${typePicked}.jpg`,
             type: 'image/jpeg'
         })
@@ -82,20 +82,6 @@ const Home = ({navigation}) => {
         });
     }
 
-    // const handle_image = () => {
-    //     let result = selectImage()
-    //     setimgPicker(false)   
-    //     settypePicker(true)
-    //     setimgPicked(result)
-    // }
-
-    // const handle_camera = () => {
-    //     let result = openCamera()
-    //     setimgPicker(false)   
-    //     settypePicker(true)
-    //     setimgPicked(result);
-    // }
-
     const selectImage = async () => { 
         let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
@@ -106,12 +92,14 @@ const Home = ({navigation}) => {
 
         let pickerResult = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
+            quality: 1
         });
         
-        if(!pickerResult.cancelled){
+        if(!pickerResult.canceled){
             setimgPicker(false)   
-            settypePicker(true)
-            setimgPicked(pickerResult)
+            let uri = pickerResult.assets[0].uri
+            setimgPicked(uri)
+            settypePicker(true)   
         }
     }
 
@@ -124,12 +112,17 @@ const Home = ({navigation}) => {
             return;
         }
 
-        const cameraResult = await ImagePicker.launchCameraAsync();
+        const cameraResult = await ImagePicker.launchCameraAsync({
+            mediaTypes: ImagePicker.MediaTypeOptions.Images,
+            quality:1
+        }
+        );
 
-        if (!cameraResult.cancelled) {
+        if (!cameraResult.canceled) {
             setimgPicker(false)   
+            let uri = cameraResult.assets[0].uri
+            setimgPicked(uri)
             settypePicker(true)
-            setimgPicked(cameraResult);
         }
     }
 
@@ -143,9 +136,9 @@ const Home = ({navigation}) => {
         Predict()
     }
 
-    // const test = () => { 
-    //     console.log(userInfo)
-    // }
+    const test = () => { 
+        console.log(typeof(userInfo))
+    }
 
     // const consolelog = () => {
     //     console.log(typePicked)
@@ -164,7 +157,7 @@ const Home = ({navigation}) => {
                 <Text style={{fontSize:30,color:"white",marginTop:20}}>Welcome to PlantSolver!!!</Text>
             <View style={[{marginTop:50},styles.image_box]}>
                 {imgPicked ? 
-                <Image source={{uri : imgPicked.uri}}
+                <Image source={{uri : imgPicked}}
                     style={styles.image_box} 
                 /> 
                 : null
@@ -204,7 +197,7 @@ const Home = ({navigation}) => {
              
                 </TouchableOpacity>
             </View>
-            {/* <Button title="Log token" onPress={() => test()}/> */}
+            <Button title="Log token" onPress={() => test()}/>
             {/* <View> 
                 <Button title="Log" onPress={() => consolelog()}/>
             </View> */}

@@ -96,23 +96,16 @@ def get_by_name(name):
         return f"Error: {e}"
 
 
-#login
-# @app.route('/likePost',methods=['POST'])
-# def login():
-#     try:
-#         email = request.json['email']
-#         password = request.json['password']
-#         check_mail =  db.child("PlantSolver").child("Users").order_by_child("email").equal_to(email).get()
-#         mail_exist = check_mail.val()
-#         if(not mail_exist):
-#             return jsonify({"error": "Email không tồn tại"})
-#         check_password = get_password_by_email(email)
-#         if(password != check_password):
-#             return jsonify({"error": "Sai mật khẩu"})
-#         user = "im_user"
-#         return jsonify({"success": True,"user":user,"token":"abc123"}),200
-#     except Exception as e:
-#         return f"Error: {e}"
+#get all
+@app.route('/getPosts',methods=['GET'])
+def get_all():
+    try:
+        data = db.child("PlantSolver").child("Posts").get()
+        data = ODict_to_Json(data)
+        return data, 200
+    except Exception as e:
+        return f"Error: {e}"
+
 # add new plant
 # @app.route('/add',methods=['POST'])
 # def add_new():
@@ -248,5 +241,5 @@ def predict():
 if __name__ == '__main__':
     flower_model = models.load_model('models/flowers-model.h5')
     fruit_model = models.load_model('models/fruit-retrain-2.h5')
-    app.run(host="0.0.0.0")
-    # app.run(host="0.0.0.0",port=3000,debug=false)
+    # app.run(host="0.0.0.0")
+    app.run(host="192.168.1.3",port=3000,debug=False)

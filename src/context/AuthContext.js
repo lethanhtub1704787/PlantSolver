@@ -24,7 +24,7 @@ export const AuthContextProvider = ({children}) => {
             return;
         }
         setisLoading(true)
-        dataToSend = {
+        const dataToSend = {
             "name" : name,
             "email" : email,
             "password" : password
@@ -67,7 +67,7 @@ export const AuthContextProvider = ({children}) => {
         // console.log("email:",email)
         // console.log("password:",password)
         setisLoading(true)
-        dataToSend = {
+        const dataToSend = {
             "email" : email,
             "password" : password
         }
@@ -109,10 +109,10 @@ export const AuthContextProvider = ({children}) => {
     const load = async () => {
         try{
           let user = await AsyncStorage.getItem("userInfo")
-    
           if (user !== null){
             console.log("loaded token:",user)
-            setuserInfo(user)
+            let to_obj = JSON.parse(user)
+            setuserInfo(to_obj)
           }else{
             console.log("token not found")
           }

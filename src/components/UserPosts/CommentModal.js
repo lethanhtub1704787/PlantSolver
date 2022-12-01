@@ -1,62 +1,70 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { SafeAreaView, Text, Image, StyleSheet,TouchableOpacity,View,FlatList, TextInput } from 'react-native';
 import Modal from 'react-native-modal';
 import SendCmtIcon from 'react-native-vector-icons/MaterialIcons'
 import firebaseConfig from "../firebase"
 import {initializeApp} from "firebase/app"
-import {getDatabase,ref,onValue,get,push,set,child} from "firebase/database"
+import {getDatabase,ref,update,onValue,get,push,set,child,query,orderByChild,equalTo} from "firebase/database"
 import Loading from "../Loading"
 import CloseIcon from 'react-native-vector-icons/Fontisto'
-
+import 'moment/locale/vi'
+import { AuthContext } from '../../context/AuthContext';
+const moment = require("moment")
 
 initializeApp(firebaseConfig)
 
 export default CommentModal = ({
     isVisible,
     onClose,
-    postId
+    commentData,
+    isCmtLoading,
+    onSendCommentPress
     }) => {
     const [cmtInputText,setcmtInputText] = useState('')
-    const [isCmtLoading,setisCmtLoading] = useState(true)
-    const [commentData,setcommentData] = useState('')
+    const {userInfo} = useContext(AuthContext)
 
-    const reference = ref(getDatabase(), 'PlantSolver/Comments');
-    useEffect(() => {
-        onValue(reference, (snapshot) => {
-            let data = []
-            snapshot.forEach(function(childSnapshot) {
-                let key = childSnapshot.key;
-                let childData = childSnapshot.val();
-                let finalData = Object.assign(childData, {key: key});
-                data.push(finalData);
-            })
-            setcommentData(data)
-        })
-        setisCmtLoading(false)
-    }, [])
-
-    const onSendCommentPress = (text) => {
-        alert(postId + " " + text)
-        setcmtInputText('')
+    function getCurrentTime(timeStamp){
+        moment.locale('vi');
+        let time = moment(timeStamp).fromNow()
+        return time
     }
 
-    renderItem = ({item}) => {
+    const addComment_handle = () => {
+        if(!cmtInputText)
+            return
+        if(!userInfo){
+            alert("Bạn cần đăng nhập để bình luận")
+            return
+        }
+        onSendCommentPress(cmtInputText)
+        setcmtInputText("")
+    }
+
+    const renderItem = ({item}) => {
+        // console.log("render name:",userInfo.name)
         return(
             <View style={styles.Card}>
                 <View style={styles.UserInfo}>
-                    <Image style={styles.UserImg} 
-                        source={require('../../../assets/icons/user.png')}
-                        // source={item.userImg}
-                    />
+                    {
+                        item.avatar ? (
+                            <Image style={styles.UserImg}
+                                source={{uri: item.avatar}}
+                            />
+                        ) :
+                            <Image style={styles.UserImg}
+                                source={require('../../../assets/icons/user.png')}
+                            />
+                    }
+                   
                     <View style={styles.cmtBox}>
                         <View style={styles.UserText}>
-                            <Text style={styles.UserName}>{item.userName}</Text>
+                            <Text style={styles.UserName}>{item.name}</Text>
                             <View style={styles.cmtContainer}>
-                                <Text style={styles.textComment}>{item.commentText}</Text>
+                                <Text style={styles.textComment}>{item.message}</Text>
                             </View>
                         </View>
-                        <Text style={styles.cmtTime}>11 giờ</Text>
+                        <Text style={styles.cmtTime}>{getCurrentTime(item.timeStamp)}</Text>
                     </View>
                     
                 </View>
@@ -78,7 +86,7 @@ export default CommentModal = ({
             </TouchableOpacity>
           
             <SafeAreaView style={styles.container}>
-                
+                <Loading loading={isCmtLoading}/>
                 <FlatList
                     data={commentData}
                     renderItem={renderItem}
@@ -92,12 +100,11 @@ export default CommentModal = ({
                             setcmtInputText(text)
                         }
                     />
-                    <TouchableOpacity onPress={() => onSendCommentPress(cmtInputText)}>
+                    <TouchableOpacity onPress={() => addComment_handle(cmtInputText)}>
                         <SendCmtIcon name="send" style={styles.sendIcon}/>
                     </TouchableOpacity>    
                 </View>
             </SafeAreaView>
-            <Loading loading={isCmtLoading}/>
         </Modal>
     );
 }
