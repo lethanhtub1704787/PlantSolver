@@ -1,8 +1,11 @@
+// import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View,Text, Image, TouchableOpacity } from "react-native";
+import { View,Text, Image, TouchableOpacity,StatusBar } from "react-native";
 
 const CustomHeader = ({title, isBack, navigation}) => {
     return(
+        <>
+        <StatusBar barStyle={"light-content"}/>
         <View style={{flexDirection:"row",height:50,backgroundColor:"#337954"}}>
             {
                 isBack?
@@ -32,6 +35,7 @@ const CustomHeader = ({title, isBack, navigation}) => {
                 
             <View style={{flex:1}}></View>
         </View>
+        </>
     );
 };
 

@@ -20,9 +20,11 @@ const SignUp = ({props,navigation}) => {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
- 
+  const [userRePassword, setUserRePassword] = useState('');
+
   const emailInputRef = createRef();
   const passwordInputRef = createRef();
+  const repasswordInputRef = createRef();
   const {signUp,errorText,isLoading,userInfo} = useContext(AuthContext)
   // const [
   //   isRegistraionSuccess,
@@ -61,7 +63,7 @@ const SignUp = ({props,navigation}) => {
             style={StyleSheet.absoluteFill}
             blurRadius={80}
         />
-    <TouchableOpacity style={{justifyContent:"center",marginTop:StatusBar.currentHeight}}
+    <TouchableOpacity style={{justifyContent:"center"}}
         onPress={() => navigation.goBack()}
     >
         <Back name="arrow-back" style={{fontSize:35,marginLeft:10,color:"white"}}/>
@@ -82,7 +84,7 @@ const SignUp = ({props,navigation}) => {
               style={styles.inputStyle}
               onChangeText={(UserName) => setUserName(UserName)}
               underlineColorAndroid="#f000"
-              placeholder="Enter Name"
+              placeholder="Tên người dùng"
               placeholderTextColor="#8b9cb5"
               autoCapitalize="sentences"
               returnKeyType="next"
@@ -97,7 +99,7 @@ const SignUp = ({props,navigation}) => {
               style={styles.inputStyle}
               onChangeText={(UserEmail) => setUserEmail(UserEmail)}
               underlineColorAndroid="#f000"
-              placeholder="Enter Email"
+              placeholder="Tên tài khoản"
               placeholderTextColor="#8b9cb5"
               keyboardType="email-address"
               ref={emailInputRef}
@@ -116,7 +118,7 @@ const SignUp = ({props,navigation}) => {
                 setUserPassword(UserPassword)
               }
               underlineColorAndroid="#f000"
-              placeholder="Enter Password"
+              placeholder="Mật khẩu"
               placeholderTextColor="#8b9cb5"
               ref={passwordInputRef}
               returnKeyType="next"
@@ -124,6 +126,25 @@ const SignUp = ({props,navigation}) => {
               onSubmitEditing={() =>
                 ageInputRef.current &&
                 ageInputRef.current.focus()
+              }
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={(UserPassword) =>
+                setUserRePassword(UserPassword)
+              }
+              underlineColorAndroid="#f000"
+              placeholder="Nhập lại mật khẩu"
+              placeholderTextColor="#8b9cb5"
+              ref={repasswordInputRef}
+              returnKeyType="next"
+              secureTextEntry={true}
+              onSubmitEditing={() =>
+                repasswordInputRef.current &&
+                repasswordInputRef.current.focus()
               }
               blurOnSubmit={false}
             />
@@ -136,7 +157,7 @@ const SignUp = ({props,navigation}) => {
           <TouchableOpacity
             style={styles.buttonStyle}
             activeOpacity={0.5}
-            onPress={() => signUp(userName,userEmail,userPassword)}>
+            onPress={() => signUp(userName,userEmail,userPassword,userRePassword)}>
             <Text style={styles.buttonTextStyle}>Đăng ký</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>

@@ -1,6 +1,6 @@
 
 import React, { useContext, useEffect, useState } from 'react';
-import { SafeAreaView, Text, Image, StyleSheet,TouchableOpacity,View,FlatList, TextInput } from 'react-native';
+import { SafeAreaView, Text, Image, StyleSheet,TouchableOpacity,View,FlatList, TextInput, Keyboard } from 'react-native';
 import Modal from 'react-native-modal';
 import SendCmtIcon from 'react-native-vector-icons/MaterialIcons'
 import firebaseConfig from "../firebase"
@@ -17,12 +17,16 @@ initializeApp(firebaseConfig)
 export default CommentModal = ({
     isVisible,
     onClose,
+    postId,
     commentData,
     isCmtLoading,
-    onSendCommentPress
+    onSendComment,
+    getCommentData
     }) => {
     const [cmtInputText,setcmtInputText] = useState('')
     const {userInfo} = useContext(AuthContext)
+    // const [thisCommentData,setthisCommentData] = useState(commentData)
+ 
 
     function getCurrentTime(timeStamp){
         moment.locale('vi');
@@ -30,14 +34,15 @@ export default CommentModal = ({
         return time
     }
 
-    const addComment_handle = () => {
+    const onSendCommentPress = (cmtInputText) => {
         if(!cmtInputText)
             return
         if(!userInfo){
             alert("Bạn cần đăng nhập để bình luận")
             return
         }
-        onSendCommentPress(cmtInputText)
+        Keyboard.dismiss()
+        onSendComment(cmtInputText)
         setcmtInputText("")
     }
 
@@ -47,9 +52,9 @@ export default CommentModal = ({
             <View style={styles.Card}>
                 <View style={styles.UserInfo}>
                     {
-                        item.avatar ? (
+                        item.info.avatar ? (
                             <Image style={styles.UserImg}
-                                source={{uri: item.avatar}}
+                                source={{uri: item.info.avatar}}
                             />
                         ) :
                             <Image style={styles.UserImg}
@@ -59,7 +64,7 @@ export default CommentModal = ({
                    
                     <View style={styles.cmtBox}>
                         <View style={styles.UserText}>
-                            <Text style={styles.UserName}>{item.name}</Text>
+                            <Text style={styles.UserName}>{item.info.name}</Text>
                             <View style={styles.cmtContainer}>
                                 <Text style={styles.textComment}>{item.message}</Text>
                             </View>
@@ -84,9 +89,9 @@ export default CommentModal = ({
                     <CloseIcon name="close" style={styles.closeIcon}/>
                 </View>
             </TouchableOpacity>
-          
+            <Loading loading={isCmtLoading}/>
             <SafeAreaView style={styles.container}>
-                <Loading loading={isCmtLoading}/>
+               
                 <FlatList
                     data={commentData}
                     renderItem={renderItem}
@@ -100,7 +105,7 @@ export default CommentModal = ({
                             setcmtInputText(text)
                         }
                     />
-                    <TouchableOpacity onPress={() => addComment_handle(cmtInputText)}>
+                    <TouchableOpacity onPress={() => onSendCommentPress(cmtInputText)}>
                         <SendCmtIcon name="send" style={styles.sendIcon}/>
                     </TouchableOpacity>    
                 </View>

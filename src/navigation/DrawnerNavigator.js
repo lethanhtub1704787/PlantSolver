@@ -6,9 +6,11 @@ import Login from "../screens/Login"
 import Profile from "../screens/Profile"
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import LogoutIcon from 'react-native-vector-icons/MaterialIcons'
+import { StackActions, NavigationActions } from "react-navigation";
 import { SafeAreaView, ScrollView,TouchableOpacity,Text,StatusBar,StyleSheet,View, Image, Alert } from "react-native";
 import { Auth } from "./StackNavigator";
 import { AuthContext } from "../context/AuthContext";
+import { CommonActions } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,6 +27,20 @@ const CustomDrawerContent = (props) => {
           onPress: () => {
             logout()
             props.navigation.navigate('Home');
+
+            // const resetAction = CommonActions.reset({
+            //   index: 0,
+            //   routes: [
+            //     { name: "Home" }
+            //   ]
+            // });
+            // props.navigation.dispatch(resetAction);
+
+            // const resetAction = StackActions.reset({
+            //   index: 0,
+            //   actions: [NavigationActions.navigate({ routeName: "Home" })],
+            // });
+            // props.navigation.dispatch(resetAction);
           },
         },
         {
@@ -43,7 +59,7 @@ const CustomDrawerContent = (props) => {
       <ScrollView>
         <View style={{marginTop:20}}/>
         <View>
-          <TouchableOpacity onPress={() => props.navigation.navigate("Home")}
+          <TouchableOpacity onPress={() => props.navigation.navigate("HomeStackNavigator")}
             style={styles.tabContainer}
           >
             <FontAwesome name="home" style={styles.icon}/>
@@ -131,7 +147,7 @@ const DrawerNavigator = () => {
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      marginTop:StatusBar.currentHeight,
+      // marginTop:StatusBar.currentHeight,
       backgroundColor:"#575757",
   },
   tabContainer:{

@@ -32,7 +32,7 @@ const Login = ({navigation}) => {
             style={StyleSheet.absoluteFill}
             blurRadius={80}
         />
-      <TouchableOpacity style={{justifyContent:"center",marginTop:StatusBar.currentHeight}}
+      <TouchableOpacity style={{justifyContent:"center"}}
             onPress={() => navigation.goBack()}
         >
             <Back name="arrow-back" style={{fontSize:35,marginLeft:10,color:"white"}}/>
@@ -60,7 +60,7 @@ const Login = ({navigation}) => {
                 onChangeText={(UserEmail) =>
                   setUserEmail(UserEmail)
                 }
-                placeholder="Email" //dummy@abc.com
+                placeholder="Tên tài khoản" //dummy@abc.com
                 placeholderTextColor="#8b9cb5"
                 autoCapitalize="none"
                 keyboardType="email-address"

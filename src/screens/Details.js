@@ -122,7 +122,7 @@ const Details = ({navigation,route}) => {
 const styles = StyleSheet.create({
     totalContainer: {
         flex: 1,
-        marginTop:StatusBar.currentHeight
+        // marginTop:StatusBar.currentHeight
     },
     container: {
         backgroundColor: 'rgba(255, 255, 255, 0.8)',

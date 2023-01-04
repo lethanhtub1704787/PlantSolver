@@ -1,1 +1,1 @@
-export default host = "http://192.168.1.3:3000"
+export default host = "https://bd07-2001-ee0-5368-4230-2001-65b1-68bf-adff.ap.ngrok.io"

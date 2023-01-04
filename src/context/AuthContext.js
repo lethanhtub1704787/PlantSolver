@@ -10,7 +10,7 @@ export const AuthContextProvider = ({children}) => {
     const [userInfo,setuserInfo] = useState('')
     const [errorText,setErrortext] = useState('')
 
-    const signUp = (name,email,password) => {
+    const signUp = (name,email,password,userRePassword) => {
         if (!name) {
             setErrortext('Xin hãy điền tên')
             return;
@@ -22,6 +22,14 @@ export const AuthContextProvider = ({children}) => {
         if (!password) {
             setErrortext('Xin hãy điền Mật khẩu')
             return;
+        }
+        if (!userRePassword) {
+          setErrortext('Xin hãy nhập lại mật khẩu')
+          return;
+      }
+        if (password!==userRePassword) {
+          setErrortext('Nhập lại mật khẩu chưa đúng')
+          return;
         }
         setisLoading(true)
         const dataToSend = {
@@ -39,10 +47,9 @@ export const AuthContextProvider = ({children}) => {
         .then(responseJson => {
             console.log("response signup: ",responseJson);
             setisLoading(false)
-            if (responseJson.success) {
-                setuserInfo(responseJson)
-                save(JSON.stringify(responseJson))
-                console.log("user Registered:",responseJson.user);
+            if (responseJson.status) {
+                setuserInfo(responseJson.data)
+                save(JSON.stringify(responseJson.data))
               } else {
                 setErrortext(responseJson.error);
                 console.log('Please check your email id or password');
@@ -94,13 +101,15 @@ export const AuthContextProvider = ({children}) => {
             // console.log("response: ",responseJson);
             console.error(error);
             setisLoading(false)
-        });
+        })
     }
 
 
     const save = async (userInfo) => {
         try{
           await AsyncStorage.setItem("userInfo",userInfo)
+          load()
+          console.log("saved new userinfo")
         }catch(err){
           alert(err)
         }
@@ -124,13 +133,13 @@ export const AuthContextProvider = ({children}) => {
     const logout = async () => {
         try{
           await AsyncStorage.removeItem("userInfo")
-    
+          setuserInfo("")
+          console.log("logged out:",userInfo)
         }catch(err){
           alert(err)
-        }finally{
-          setuserInfo('')
         }
       }
+
 
     useEffect(() => {
         load()
@@ -138,7 +147,7 @@ export const AuthContextProvider = ({children}) => {
 
 
   return (
-    <AuthContext.Provider value={{signUp,login,logout,isLoading,userInfo,errorText}}>
+    <AuthContext.Provider value={{signUp,login,logout,save,isLoading,userInfo,errorText}}>
         {children}
     </AuthContext.Provider>    
   )

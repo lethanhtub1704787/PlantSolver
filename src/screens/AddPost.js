@@ -78,38 +78,51 @@ const AddPost = ({navigation,route}) => {
         try{
             const target_ref = ref(getDatabase(), 'PlantSolver/Posts');
             const newPostKey = push(target_ref).key;
-            const my_storage = MyStorage.getStorage()
-            const upload_ref = MyStorage.ref(my_storage,'Posts/'+newPostKey+".jpg")
-            // console.log("ref:",ref)
-            const img = await fetch(imgPicked)
-            const bytes = await img.blob()
-            await uploadBytes(upload_ref,bytes).then((snapshot) => {
-                let url_ref = snapshot.ref
-                getDownloadURL(url_ref).then(
-                    (url) => {
-                        const postData = {
-                            content: content,
-                            uid: user.userId,
-                            image: url,
-                            likeCount: 0,
-                            cmtCount: 0,
-                            timeStamp: getCurrentTime(),
-                            liked:""
-                        };
-                          // Write the new post's data simultaneously in the posts list and the user's post list.
-                        const updates = {};
-                        updates[newPostKey] = postData;       
-                        // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-                        update(target_ref, updates);
-                    }
-                )
-            });            
-        }catch(err){
-            alert(err)
+            const image = []
+            const nowTime = getCurrentTime()
+            if(imgPicked){
+                console.log("uploading image")
+                const my_storage = MyStorage.getStorage()
+                const upload_ref = MyStorage.ref(my_storage,'Posts/'+newPostKey+".jpg")
+                // console.log("ref:",ref)
+                const img = await fetch(imgPicked)
+                const bytes = await img.blob()
+                const uploadImage = await uploadBytes(upload_ref,bytes).catch((error) => {
+                    console.error(error)
+                    setisLoading(false)
+                })
+                let url_ref = uploadImage.ref
+                let urlLink = await getDownloadURL(url_ref)
+                console.log(urlLink)
+                image.push(urlLink)
+                // .then((url) => {
+                //     console.log(url)
+                //     image.push(url)
+                // })
+            }
+           
+            const postData = {
+                content: content,
+                uid: user.userId,
+                image: image[0] ? image[0] : "",
+                timeStamp: nowTime,
+            };
+                // Write the new post's data simultaneously in the posts list and the user's post list.
+            const updates = {};
+            updates[newPostKey] = postData;       
+            // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+            update(target_ref, updates);
+            // navigation.goBack()
+            navigation.navigate("Posts",{
+                content: postData.content,
+                image: postData.image,
+                timeStamp: postData.nowTime,
+                key: newPostKey
+            })
+            setisLoading(false)            
+        }catch{
+            (error) => console.log(error)
         }
-        setisLoading(false)
-       
-        navigation.goBack()
     }
 
     return (
@@ -172,7 +185,7 @@ const styles = StyleSheet.create({
         // backgroundColor:"red"
     },
     header:{
-        marginTop:StatusBar.currentHeight,
+        // marginTop:StatusBar.currentHeight,
         flexDirection:"row",
         justifyContent:"space-between",
         paddingHorizontal:20,

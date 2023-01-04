@@ -43,11 +43,12 @@ const Find = ({navigation}) => {
     const [isLoading, setisLoading] = useState(true);
     const [search,setSearch] = useState('');
 
-    const reference = ref(getDatabase(), 'PlantSolver/Plants');
-
+    const plant_reference = ref(getDatabase(), 'PlantSolver/Plants');
+    const post_reference = ref(getDatabase(), 'PlantSolver/Posts');
     useEffect(() => {
        
-        onValue(reference, (snapshot) => {
+        onValue(plant_reference, (snapshot) => {
+            console.log("plants changed")
             let array = []
             snapshot.forEach(function(childSnapshot) {
                 let key = childSnapshot.key;
@@ -61,6 +62,9 @@ const Find = ({navigation}) => {
             setdata(array)
             setfilteredData(array)
         })
+        // onValue(post_reference, () => {
+        //     console.log("posts changed")
+        // })
         setisLoading(false)
     }, [])
 
@@ -86,7 +90,7 @@ const Find = ({navigation}) => {
     const searchFilter = (text) => {
         if(text){
             const newData = data.filter((item) => {
-                const itemData = item.name ? item.name.toUpperCase() : "".toUpperCase();
+                const itemData = item.vName ? item.vName.toUpperCase() : "".toUpperCase();
                 const textData = text.toUpperCase();
                 return itemData.indexOf(textData) > -1;
             });
@@ -100,7 +104,7 @@ const Find = ({navigation}) => {
     const navigateToDetails = (item) => {
         navigation.navigate("Chi tiết", {
             id: item.id,
-            name: item.name,
+            name: item.vName,
             info: item.info, 
             genus: item.genus,
             family: item.family,
@@ -110,6 +114,7 @@ const Find = ({navigation}) => {
     }
     
     const renderItem = ({item, index}) => {
+        // console.log("re-render fruits")
       const scale = scrollY.interpolate({
         inputRange:[
           -1, 0,
@@ -150,8 +155,12 @@ const Find = ({navigation}) => {
                 />
                 <View style={styles.wrapText}>
                     <Text style={styles.fontSize}>
-                        {index + '. ' + item.name}
+                        {item.vName}
                     </Text> 
+                    <Text style={{fontSize:15}}>
+                        {item.info.substring(0,100)}...
+                    </Text> 
+               
                 </View>
             </Animated.View>
           </TouchableOpacity>
@@ -224,7 +233,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        marginTop:StatusBar.currentHeight
+        // marginTop:StatusBar.currentHeight
     },
       text: {
         fontSize: 42,

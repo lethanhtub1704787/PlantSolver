@@ -22,7 +22,7 @@ const FindStackNavigator = () => {
 
 const HomeStackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={screenHome}>
+    <Stack.Navigator screenOptions={screenHome} initialRouteName="Home">
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Chi tiết" component={Details} />

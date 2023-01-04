@@ -42,7 +42,7 @@ const Home = ({navigation}) => {
         // console.log("data params:",data[0].name)
         navigation.navigate("Chi tiết", {
             id: data.id,
-            name: data.name,
+            name: data.vName,
             info: data.info, 
             genus: data.genus,
             family: data.family,
@@ -154,8 +154,13 @@ const Home = ({navigation}) => {
                     style={StyleSheet.absoluteFill}
                     blurRadius={50}
                 /> 
-                <Text style={{fontSize:30,color:"white",marginTop:20}}>Welcome to PlantSolver!!!</Text>
-            <View style={[{marginTop:50},styles.image_box]}>
+                <Text style={{fontSize:30,color:"white",marginTop:20,justifyContent:"center",textAlign:"center"}}>Chào mừng bạn đến với</Text>
+                <Text style={{fontSize:45,color:"#7DE24E",marginTop:20,justifyContent:"center",textAlign:"center",fontFamily:"monospace"}}>
+                    PlantSolver
+                </Text>
+                
+                
+            <View style={[{marginTop:10},styles.image_box]}>
                 {imgPicked ? 
                 <Image source={{uri : imgPicked}}
                     style={styles.image_box} 
@@ -182,7 +187,7 @@ const Home = ({navigation}) => {
          
             
  
-            <View style={{flexDirection:"row",marginTop:50}}>
+            <View style={{flexDirection:"row",marginTop:30}}>
                 <TouchableOpacity onPress={() => setimgPicker(true)} >
                     <View style={styles.button}>
                         <Text style={{fontSize:28,color:"#FFFFFF"}}>Chọn ảnh/Chụp</Text>
@@ -197,7 +202,7 @@ const Home = ({navigation}) => {
              
                 </TouchableOpacity>
             </View>
-            <Button title="Log token" onPress={() => test()}/>
+            {/* <Button title="Log token" onPress={() => test()}/> */}
             {/* <View> 
                 <Button title="Log" onPress={() => consolelog()}/>
             </View> */}
@@ -229,7 +234,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        marginTop:StatusBar.currentHeight
+        // marginTop:StatusBar.currentHeight
     },
     button: {
         backgroundColor:"#337954",

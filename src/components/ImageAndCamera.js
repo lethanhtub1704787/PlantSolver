@@ -1,6 +1,6 @@
 
 import * as ImagePicker from 'expo-image-picker';
-const openCamera = async ()  => {
+async function openCamera(){
     // Ask the user for the permission to access the camera
     const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
 
@@ -11,15 +11,10 @@ const openCamera = async ()  => {
 
     const cameraResult = await ImagePicker.launchCameraAsync();
 
-    if (!cameraResult.cancelled) {
-        return cameraResult
-        // setimgPicker(false)   
-        // settypePicker(true)
-        // setimgPicked(cameraResult);
-    }
+    return !cameraResult.canceled ? cameraResult.assets[0].uri : null
 }
 
-const selectImage = async () => { 
+async function selectImage(){ 
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
     if (permissionResult.granted === false) {
@@ -31,12 +26,7 @@ const selectImage = async () => {
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
     });
     
-    if(!pickerResult.cancelled){
-        return pickerResult
-        // setimgPicker(false)   
-        // settypePicker(true)
-        // setimgPicked(pickerResult)
-    }
+    return !pickerResult.canceled ? pickerResult.assets[0].uri : null
 }
 
 export default {openCamera,selectImage}
